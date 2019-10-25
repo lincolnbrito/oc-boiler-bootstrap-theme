@@ -1,0 +1,33 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Lincoln Brito">
+        <meta name="generator" content="October CMS">
+
+        <title>{{ this.page.title }}</title>
+
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="description" content="{{ this.page.meta_description }}">
+
+        <meta property="og:title" content="{{ this.page.meta_title }}" />
+        <meta property="og:description" content="{{ this.page.meta_description }}" />
+
+        <meta property="og:url" content="{{ url_current() }}" />
+        <meta property="og:image" content="" />
+
+        <link rel="shortcut icon" href="{{ 'assets/images/favicon.png'|theme }}" type="image/png">
+        <link rel="icon" href="{{ 'assets/images/favicon.png'|theme }}" type="image/png">        
+
+        {% styles %} 
+    </head>
+    <body>        
+
+        
+        {% framework extras %}    
+        {% scripts %}
+    </body>
+</html>
