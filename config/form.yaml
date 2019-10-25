@@ -1,0 +1,57 @@
+fields:
+  site_name:
+    label: Site Name
+    type: text
+    span: left
+    default: Boiler Bootstrap theme
+    comment: Insert the site name
+  site_link:
+    label: Site link
+    type: text
+    default: "https://localhost"
+    span: right
+    comment: 'Insert the URL of website to generate links. 
+    Example: http://mywebsite.com'
+  enable_framework:    
+    label: Enable Framework Extras?
+    type: switch
+    default: male
+    span: left
+    comment: Enable if you want insert the October CMS framework extra
+tabs:
+  stretch: true  
+  cssClass: text-blue
+  paneCssClass:
+      0: first-tab-buceta
+      1: second-tab-master
+  fields:
+    instagram:      
+      type: text
+      label: Instagram
+      span: storm
+      cssClass: col-xs-4
+      tab: Links
+    facebook:
+      type: text
+      label: Facebook
+      span: storm
+      cssClass: col-xs-4
+      tab: Links
+    twitter:
+      type: text
+      label: Twitter
+      span: storm
+      cssClass: col-xs-4
+      tab: Links 
+    snapchat:
+      type: text
+      label: Snapchat
+      span: storm
+      cssClass: col-xs-4
+      tab: Links
+    md_content:
+      type: markdown
+      label: Bio
+      comment: Insert a bio
+      size: small
+      mode: split  

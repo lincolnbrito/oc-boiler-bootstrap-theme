@@ -1,0 +1,10 @@
+# @see https://github.com/prismify/oc-bootstrap-theme/blob/master/config/t.yaml
+# Theme translate.
+#
+# Require: - RainLab:Translate
+# Example:
+#   en:
+#     site.name: 'Bootstrap'
+# Use:
+#   {{ 'site.name'|_ }}
+########################################################################################################################
