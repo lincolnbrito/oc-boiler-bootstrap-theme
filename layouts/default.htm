@@ -1,33 +1,46 @@
 description = "Default layout"
 ==
+<?php
+function onInit()
+{
+    $themePath = 'themes/' . $this->theme->getDirName();
+    $this->layout['styles'] = url(mix('assets/css/styles.css', $themePath));
+    $this->layout['scripts'] = url(mix('assets/js/scripts.js', $themePath));
+}
+?>
+==
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Lincoln Brito">
-        <meta name="generator" content="October CMS">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lincoln Brito">
+    <meta name="generator" content="October CMS">
 
-        <title>{{ this.page.title }}</title>
+    <title>{{ this.page.title }}</title>
 
-        <meta name="title" content="{{ this.page.meta_title }}">
-        <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="description" content="{{ this.page.meta_description }}">
 
-        <meta property="og:title" content="{{ this.page.meta_title }}" />
-        <meta property="og:description" content="{{ this.page.meta_description }}" />
+    <meta property="og:title" content="{{ this.page.meta_title }}" />
+    <meta property="og:description" content="{{ this.page.meta_description }}" />
 
-        <meta property="og:url" content="{{ url_current() }}" />
-        <meta property="og:image" content="" />
+    <meta property="og:url" content="{{ url_current() }}" />
+    <meta property="og:image" content="" />
 
-        <link rel="shortcut icon" href="{{ 'assets/images/favicon.png'|theme }}" type="image/png">
-        <link rel="icon" href="{{ 'assets/images/favicon.png'|theme }}" type="image/png">        
+    <link rel="shortcut icon" href="{{ 'assets/images/favicon.png'|theme }}" type="image/png">
+    <link rel="icon" href="{{ 'assets/images/favicon.png'|theme }}" type="image/png">        
 
-        {% styles %} 
-    </head>
-    <body>        
+    <link href="{{ this.layout.styles }}" rel="stylesheet">
 
-        
-        {% framework extras %}    
-        {% scripts %}
-    </body>
+    {% styles %} 
+</head>
+<body>
+<div class="alert alert-info">Teste</div>
+
+
+<script src="{{ this.layout.scripts }}"></script> 
+{% framework extras %}
+{% scripts %}
+</body>
 </html>

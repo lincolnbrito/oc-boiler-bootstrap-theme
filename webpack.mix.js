@@ -1,7 +1,7 @@
 let mix = require('laravel-mix');
 
 mix.options({
-        processCssUrls: false,
+        processCssUrls: true,
         autoprefixer: {
             enabled: true,
             options: {
@@ -11,13 +11,13 @@ mix.options({
             }
         },
         fileLoaderDirs: {
-            fonts: 'assets/fonts'
+            fonts: 'fonts'
         }
     })
-    .setPublicPath('/')
+    .setPublicPath('assets')
+    .setResourceRoot('../')
     .sass('src/scss/app.scss', 'assets/css/styles.css')
     .js('src/js/app.js', 'assets/js/scripts.js')
-    .copy('node_modules/@fortawesome/fontawesome-free/webfonts', 'assets/fonts')
     .version();
 
 // Full API
